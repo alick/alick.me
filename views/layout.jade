@@ -1,0 +1,39 @@
+!!!5
+html(lang='zh')
+  head
+    title #{title} - Alick.me
+    link(rel='shortcut icon', type='image/x-icon', href='/images/favicon.ico')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', media='screen', href='http://openfontlibrary.org/face/gnutypewriter')
+    script(src='/scripts/lunar.js')
+    //if lt IE 9
+      script(src='/scripts/html5shiv.js')
+  body
+    header
+      .header
+        h1 Alick
+      nav
+        - if (title == "首页")
+          a.active(href='/') 首页
+        else
+          a(href='/') 首页
+        a(href='http://blog.alick.me') 博客
+        a(href='https://github.com/alick9188/mywiki/wiki') 维基
+        a(href='http://www.flickr.com/photos/alick9188/') 相册
+        - if (title == "导航页")
+          a.active(href='/surf') 导航
+        else
+          a(href='/surf') 导航
+        - if (title == "关于")
+          a.active(href='/about') 关于
+        else
+          a(href='/about') 关于
+    .container
+      .main-content
+        block content
+      .sidebar
+        .widget
+          div#timer(title='我是一个带节日提醒的万年历')
+    footer
+      p Copyright &copy; 2013 Alick Zhao
+//- vim: set sw=2 et ai:

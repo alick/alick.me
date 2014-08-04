@@ -1,0 +1,170 @@
+/*
+ * Import nib
+ */
+@import 'nib'
+
+/*
+ * Nib provides a CSS reset
+ */
+global-reset()
+
+/*
+ * Store the main color and
+ * background color as variables
+ */
+header-color = #227ad1
+nav-color = #b6d1e4
+background-color = #faf9f0
+
+body
+  font-family 'sans-serif'
+  background-color background-color
+  color #444
+
+header
+  margin 0 10% 0
+  font-family 'Georgia'
+  padding 0
+  color header-color
+
+  .header
+    background background-color url('/images/stripe.png')
+    padding 30px 0
+
+  h1
+    font-size 3em
+    text-align right
+    color white
+    font-family 'GNUTypewriter'
+
+  nav
+    margin-top 9px
+    padding-bottom 1px
+    border-bottom 1px solid nav-color
+    a
+      border 1px solid nav-color
+      border-bottom none
+      border-radius 3px 3px 0 0
+      padding 5px 3px 0
+      margin 0 1px 0 0
+      font-size 1.5em
+    a:hover, a:active, a.active
+      color white
+      background-color header-color
+      background linear-gradient(top, nav-color, 30% header-color)
+
+  /*
+   * Note the use of the `header-color`
+   * variable and the `darken` function
+   */
+  background-color background-color
+
+.container
+  min-width 500px
+  margin 50px 10%
+  overflow hidden
+
+.main-content
+  float left
+  width 70%
+
+  p, ul, ol
+    margin-bottom 20px
+
+.sidebar
+  float right
+  width 30%
+
+  .widget
+
+    /*
+     * Note the lack of vendor
+     * prefixes here. Nib will
+     * add them for us
+     */
+    border-radius 3px
+    border 1px solid #ccc
+    margin-left 20px
+    background-color background-color
+    box-shadow inset 0px 0px 0px 3px rgba(#fff, 0.8), 0px 3px 0px -2px rgba(#000, 0.1)
+    padding 5px 10px
+    margin-bottom 10px
+
+h2
+  color header-color
+  font-size 1.5em
+  margin-bottom 10px
+
+p
+  line-height 1.5
+
+a
+  text-decoration none
+
+ul, ol
+  margin-left 30px
+  line-height 1.3
+
+ul
+  list-style disc
+
+ol
+  list-style decimal
+
+footer
+  min-width 500px
+  margin 50px 10%
+  border-top 1px dotted #ccc
+  padding-top 5px
+  font-size 13px
+
+.surfing
+  max-width 500px
+  margin 10px
+
+.sitegroup
+  border 1px solid blue
+  border-radius 3px
+  margin 3px
+  display inline-block
+  max-width 220px
+  min-width 100px
+  vertical-align top
+
+.sitegroup:hover
+  transform scale(1.1, 1.1)
+  background-color background-color
+
+.sitegroup a
+  background-color #00c8c8
+  color white
+  border-radius 5px
+  display inline-block
+  margin 3px 2px
+  padding 2px
+
+.sitegroup a:hover
+  color yellow
+  font-weight bold
+
+.sitegroupname
+  color white
+  background-color #0066FF
+  border-radius 2px 2px 0 0
+  display block
+  font-size 90%
+
+.sitegroupname:after
+  content "¶"
+
+#timer
+  font-size 0.9em
+  color green
+
+.festival
+  color red
+
+.centering
+  text-align center
+
+/* vim: set sw=2 et ai: */
