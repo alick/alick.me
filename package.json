@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "private": "true",
   "dependencies": {
-    "express": "*",
+    "express": "~3.4.4",
     "jade": "*",
     "stylus": "*",
     "nib": "*"
