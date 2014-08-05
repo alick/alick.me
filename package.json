@@ -7,6 +7,5 @@
     "jade": "*",
     "stylus": "*",
     "nib": "*"
-  },
-  "main": "app.js"
+  }
 }
