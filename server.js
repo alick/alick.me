@@ -1,22 +1,15 @@
 // REF: http://clock.co.uk/tech-blogs/a-simple-website-in-nodejs-with-express-jade-and-stylus
-
-//  Set the environment variables we need.
-var ipaddress = process.env.OPENSHIFT_NODEJS_IP;
-var port      = process.env.OPENSHIFT_NODEJS_PORT || 2460;
-
-if (typeof ipaddress === "undefined") {
-  //  Log errors on OpenShift but continue w/ 127.0.0.1 - this
-  //  allows us to run/test the app locally.
-  console.warn('No OPENSHIFT_NODEJS_IP var, using 127.0.0.1');
-  ipaddress = "127.0.0.1";
-};
-
 /*
  * Module dependencies
  */
-var express = require('express')
-  , stylus = require('stylus')
-  , nib = require('nib')
+var http = require('http');
+var express = require('express');
+var stylus = require('stylus');
+var nib = require('nib');
+var path = require('path');
+
+var favicon = require('serve-favicon');
+var logger = require('morgan');
 
 var app = express()
 function compile(str, path) {
@@ -24,20 +17,56 @@ function compile(str, path) {
     .set('filename', path)
     .use(nib())
 }
-app.set('views', __dirname + '/views')
-app.set('view engine', 'jade')
-if ('dev' == app.settings.env) {
-  app.use(express.logger('dev'))
+
+app.set('hostname', process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1');
+app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 2460);
+app.set('views', path.join(__dirname, '/views'));
+app.set('view engine', 'jade');
+app.use(favicon(__dirname + '/public/images/favicon.ico'));
+if ('development' == app.get('env')) {
+  app.use(logger('dev'));
 }
 app.use(stylus.middleware(
   { src: __dirname + '/public'
   , compile: compile
   }
 ))
-app.use(express.static(__dirname + '/public'))
+app.use(express.static(path.join(__dirname, '/public')));
 
-// REF: https://github.com/visionmedia/express/blob/master/examples/error-pages/index.js
-app.use(app.router);
+app.get('/', function (req, res) {
+  res.render('index',
+  { title : "首页" }
+  )
+})
+app.get('/index', function (req, res) {
+  res.render('index',
+  { title : "首页" }
+  )
+})
+app.get('/surf', function (req, res) {
+  res.render('surf',
+  { title : "导航页" }
+  )
+})
+app.get('/about', function (req, res) {
+  res.render('about',
+  { title : "关于" }
+  )
+})
+
+app.get('/404', function (req, res, next) {
+  next();
+});
+app.get('/403', function (req, res, next) {
+  var err = Error('Forbidden!');
+  err.status = 403;
+  next(err);
+});
+app.get('/500', function (req, res, next) {
+  next(new Error('Unknown. Pray for peace.'));
+});
+
+// Express 4: error handling middleware should be loaded after routes.
 
 app.use(function(req, res, next){
   res.status(404);
@@ -78,42 +107,9 @@ app.use(function(err, req, res, next){
   res.render('500', { error: err });
 });
 
-app.get('/', function (req, res) {
-  res.render('index',
-  { title : "首页" }
-  )
-})
-app.get('/index', function (req, res) {
-  res.render('index',
-  { title : "首页" }
-  )
-})
-app.get('/surf', function (req, res) {
-  res.render('surf',
-  { title : "导航页" }
-  )
-})
-app.get('/about', function (req, res) {
-  res.render('about',
-  { title : "关于" }
-  )
-})
-
-app.get('/404', function (req, res, next) {
-  next();
-});
-app.get('/403', function (req, res, next) {
-  var err = Error('Forbidden!');
-  err.status = 403;
-  next(err);
-});
-app.get('/500', function (req, res, next) {
-  next(new Error('Unknown. Pray for peace.'));
-});
-
-app.listen(port, ipaddress, function() {
-  console.log('%s: Node server started on %s:%d ...',
-    Date(Date.now()), ipaddress, port);
+var server = http.createServer(app);
+server.listen(app.get('port'), app.get('hostname'), function(){
+  console.log('Express server listening on port ' + app.get('port'));
 });
 
 // vim: set sw=2 et:
