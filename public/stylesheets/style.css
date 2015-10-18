@@ -5,6 +5,7 @@
  * Store the main color and
  * background color as variables
  */
+/* same as .label-primary */
 body {
   font-family: 'sans-serif';
   background-color: #faf9f0;
@@ -24,7 +25,7 @@ p {
   margin: 3px;
   display: inline-block;
   max-width: 220px;
-  min-width: 100px;
+  min-width: 80px;
   vertical-align: top;
 }
 .sitegroup:hover {
@@ -46,17 +47,16 @@ p {
 }
 .sitegroup a:hover {
   color: #ff0;
-  font-weight: bold;
+  text-decoration: none;
+  background-color: #337ab7;
 }
 .sitegroupname {
   color: #fff;
-  background-color: #337ab7;
   -webkit-border-radius: 2px 2px 0 0;
   border-radius: 2px 2px 0 0;
   display: block;
-  font-size: 90%;
 }
-.sitegroupname:after {
+.sitegroupname:before {
   content: "¶";
 }
 #timer {

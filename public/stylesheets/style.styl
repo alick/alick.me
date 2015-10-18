@@ -7,9 +7,9 @@
  * Store the main color and
  * background color as variables
  */
-header-color = #227ad1
-nav-color = #b6d1e4
 background-color = #faf9f0
+/* same as .label-primary */
+bg-color-focus = #337AB7
 
 body
   font-family 'sans-serif'
@@ -29,7 +29,7 @@ p
   margin 3px
   display inline-block
   max-width 220px
-  min-width 100px
+  min-width 80px
   vertical-align top
 
 .sitegroup:hover
@@ -46,16 +46,15 @@ p
 
 .sitegroup a:hover
   color yellow
-  font-weight bold
+  text-decoration none
+  background-color bg-color-focus
 
 .sitegroupname
   color white
-  background-color #337AB7
   border-radius 2px 2px 0 0
   display block
-  font-size 90%
 
-.sitegroupname:after
+.sitegroupname:before
   content "¶"
 
 #timer
