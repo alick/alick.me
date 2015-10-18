@@ -19,6 +19,11 @@ html(lang='zh')
     nav(class='navbar navbar-default navbar-fixed-top')
       .container
         .navbar-header
+          button(type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#navbar' aria-expanded='false' aria-controls='navbar')
+            span.sr-only 显示/隐藏导航菜单
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
           a(href='#' class='navbar-brand') #{app}
         #navbar(class='navbar-collapse collapse')
           ul(class='nav navbar-nav navbar-right')
