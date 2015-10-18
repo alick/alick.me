@@ -17,7 +17,7 @@
     bottom:1px;top:auto;
 }
 
-@media screen and (min-width:1500px) {
+@media screen and (min-width:1000px) {
     .forkongithub {
         position:fixed;display:block;top:0;left:0;width:200px;overflow:hidden;height:200px;z-index:9999;
     }

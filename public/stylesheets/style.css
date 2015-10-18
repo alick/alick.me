@@ -6,6 +6,11 @@
  * background color as variables
  */
 /* same as .label-primary */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
 body {
   font-family: 'sans-serif';
   background-color: #faf9f0;
