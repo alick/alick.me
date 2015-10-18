@@ -2,100 +2,6 @@
  * Import nib
  */
 /*
- * Nib provides a CSS reset
- */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-family: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-body {
-  line-height: 1;
-  color: #000;
-  background: #fff;
-}
-ol,
-ul {
-  list-style: none;
-}
-table {
-  border-collapse: separate;
-  border-spacing: 0;
-  vertical-align: middle;
-}
-caption,
-th,
-td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-a img {
-  border: none;
-}
-/*
  * Store the main color and
  * background color as variables
  */
@@ -103,118 +9,12 @@ body {
   font-family: 'sans-serif';
   background-color: #faf9f0;
   color: #444;
-}
-header {
-  margin: 0 10% 0;
-  font-family: 'Georgia';
-  padding: 0;
-  color: #227ad1;
-/*
-   * Note the use of the `header-color`
-   * variable and the `darken` function
-   */
-  background-color: #faf9f0;
-}
-header .header {
-  background: #faf9f0 url("/images/stripe.png");
-  padding: 30px 0;
-}
-header h1 {
-  font-size: 3em;
-  text-align: right;
-  color: #fff;
-  font-family: 'GNUTypewriter';
-}
-header nav {
-  margin-top: 9px;
-  padding-bottom: 1px;
-  border-bottom: 1px solid #b6d1e4;
-}
-header nav a {
-  border: 1px solid #b6d1e4;
-  border-bottom: none;
-  -webkit-border-radius: 3px 3px 0 0;
-  border-radius: 3px 3px 0 0;
-  padding: 5px 3px 0;
-  margin: 0 1px 0 0;
-  font-size: 1.5em;
-}
-header nav a:hover,
-header nav a:active,
-header nav a.active {
-  color: #fff;
-  background-color: #227ad1;
-  background: -webkit-linear-gradient(top, #b6d1e4, #227ad1 30%);
-  background: -moz-linear-gradient(top, #b6d1e4, #227ad1 30%);
-  background: -o-linear-gradient(top, #b6d1e4, #227ad1 30%);
-  background: -ms-linear-gradient(top, #b6d1e4, #227ad1 30%);
-  background: linear-gradient(to bottom, #b6d1e4, #227ad1 30%);
-}
-.container {
-  min-width: 500px;
-  margin: 50px 10%;
-  overflow: hidden;
-}
-.main-content {
-  float: left;
-  width: 70%;
-}
-.main-content p,
-.main-content ul,
-.main-content ol {
-  margin-bottom: 20px;
-}
-.sidebar {
-  float: right;
-  width: 30%;
-}
-.sidebar .widget {
-/*
-     * Note the lack of vendor
-     * prefixes here. Nib will
-     * add them for us
-     */
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  border: 1px solid #ccc;
-  margin-left: 20px;
-  background-color: #faf9f0;
-  -webkit-box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,0.8), 0px 3px 0px -2px rgba(0,0,0,0.1);
-  box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,0.8), 0px 3px 0px -2px rgba(0,0,0,0.1);
-  padding: 5px 10px;
-  margin-bottom: 10px;
-}
-h2 {
-  color: #227ad1;
-  font-size: 1.5em;
-  margin-bottom: 10px;
+  padding-top: 70px;
 }
 p {
   line-height: 1.5;
 }
-a {
-  text-decoration: none;
-}
-ul,
-ol {
-  margin-left: 30px;
-  line-height: 1.3;
-}
-ul {
-  list-style: disc;
-}
-ol {
-  list-style: decimal;
-}
-footer {
-  min-width: 500px;
-  margin: 50px 10%;
-  border-top: 1px dotted #ccc;
-  padding-top: 5px;
-  font-size: 13px;
-}
 .surfing {
-  max-width: 500px;
   margin: 10px;
 }
 .sitegroup {
@@ -250,7 +50,7 @@ footer {
 }
 .sitegroupname {
   color: #fff;
-  background-color: #06f;
+  background-color: #337ab7;
   -webkit-border-radius: 2px 2px 0 0;
   border-radius: 2px 2px 0 0;
   display: block;
