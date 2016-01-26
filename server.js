@@ -7,6 +7,8 @@ var express = require('express');
 var stylus = require('stylus');
 var nib = require('nib');
 var path = require('path');
+var cookieParser = require('cookie-parser');
+var i18n = require('i18n-2');
 
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -31,27 +33,69 @@ app.use(stylus.middleware(
   , compile: compile
   }
 ))
+app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/public')));
 
+i18n.expressBind(app, {
+    // Setup locales - other locales default to en.
+    locales    : ['en', 'zh'],
+    // Change the cookie name from 'lang' to 'locale'.
+    cookieName : 'locale',
+    // Set indentation in locales/*.js files.
+    indent     : 2
+});
+
+// This is how you'd set a locale from req.cookies.
+// Don't forget to set the cookie either on the client or in your Express app.
+app.use(function(req, res, next) {
+    req.i18n.setLocaleFromQuery();
+    req.i18n.setLocaleFromCookie();
+    next();
+});
+
 app.get('/', function (req, res) {
+  req.i18n.setLocale('en')
   res.render('index',
-  { title : "首页" }
+  {
+    title : req.i18n.__("Homepage"),
+    rel_url : ''
+  }
   )
 })
-app.get('/index', function (req, res) {
-  res.render('index',
-  { title : "首页" }
-  )
-})
-app.get('/surf', function (req, res) {
-  res.render('surf',
-  { title : "导航页" }
-  )
+app.get('/:lang', function (req, res, next) {
+  if (/\w{2}(_\w+)?/.test(req.params.lang)) {
+    req.i18n.setLocale(req.params.lang)
+    res.render('index',
+    {
+      title : req.i18n.__("Homepage"),
+      rel_url : ''
+    }
+    )
+  } else {
+    next()
+  }
 })
 app.get('/about', function (req, res) {
+  req.i18n.setLocale('en')
   res.render('about',
-  { title : "关于" }
+  {
+    title : req.i18n.__("About"),
+    rel_url : 'about'
+  }
   )
+})
+app.get('/:lang/about', function (req, res, next) {
+  if (/\w{2}(_\w+)?/.test(req.params.lang)) {
+    req.i18n.setLocale(req.params.lang)
+    res.render('about',
+    {
+      title : req.i18n.__("About"),
+      rel_url : 'about'
+    }
+    )
+  } else {
+    next()
+  }
 })
 
 app.get('/404', function (req, res, next) {
