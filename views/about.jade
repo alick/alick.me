@@ -3,33 +3,23 @@ extend layout
 block content
   h2=__('About me')
   p
-    | 我是赵涛，河南许昌人。现为德州 A&amp;M 大学博士研究生，从事网络领域研究。
-    | 爱好开源技术（网站开发、系统管理、程序设计等）以及其背后的开放协作文化，
-    | 是一名 
-    a(href='https://fedoraproject.org/wiki/User:Alick') Fedora 社区贡献者
-    | 。
+    | #{__("I'm Tao Zhao from China, currently a Ph.D. student in Texas A&M University.")}
+    | #{__("I love free and open source technologies and culture.")}
+    | !{__("I am a <a href='https://fedoraproject.org/wiki/User:Alick'>Fedora Project contributor</a>.")}
   h3=__('Contact')
   ul
-    li 优先邮箱：alick NOSPACE 9188 AT GMAIL dot com
+    li #{__('Email preferred: ')}alick NOSPACE 9188 AT GMAIL dot com
     li
-      | 社交网站（参见
-      a(href='/') #{__('Homepage')}
-      |）
-    li IRC、XMPP 等即时聊天工具
+      | !{__('Social Network Sites: Check <a href="/en/">the homepage</a>.')}
+    li #{__('IRC: alick at freenode')}
   h2=__('About this site')
   p
-    | 本站是之前挂靠在清华大学网络学堂下的个人主页的后继。没有了纯静态页面的限制，本站使用 Node.js,
-    | Express, Jade, Stylus 等搭建。
-    | 如无特殊声明，本站内容以
-    a(href='http://creativecommons.org/licenses/by-sa/4.0/deed.zh', title='署名-相同方式共享 4.0') CC BY-SA 4.0
-    | 许可授权自由使用。
+    | #{__("This site is built with Node.js, Express, Jade, Stylus and others.")}
+    | !{__("If not specified otherwise, the contents are licensed under <a href='http://creativecommons.org/licenses/by-sa/4.0/deed' title='Attribution-ShareAlike 4.0 International'>CC BY-SA 4.0</a>.")}
   h3 #{__('Domain name')} Alick.me
   p
-    | Alick 是我初二时从字典里附录中挑出来的英文名，沿用至今。me 是
-    a(href='http://en.wikipedia.org/wiki/.me') 黑山
-    | 这个国家的顶级域名，目前在被各种人滥用。Alick.me 购自
-    a(href='http://www.godaddy.com/') Godaddy
-    | 。
+    | #{__("Alick is my English name picked up in the dictionary by myself.")}
+    | !{__("\"me\" is the country code top-level domain for the country <a href='http://en.wikipedia.org/wiki/.me'>Montenegro</a>, but also apparently suitable for personal websites.")}
   h3=__('Changelog')
   ul
     li 2016-01-26 #{__('Internationalization.')}
