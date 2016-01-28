@@ -54,11 +54,18 @@ app.use(function(req, res, next) {
 });
 
 app.get('/', function (req, res) {
-  req.i18n.setLocale('en')
   res.render('index',
   {
     title : req.i18n.__("Homepage"),
     rel_url : ''
+  }
+  )
+})
+app.get('/about', function (req, res) {
+  res.render('about',
+  {
+    title : req.i18n.__("About"),
+    rel_url : 'about'
   }
   )
 })
@@ -74,15 +81,6 @@ app.get('/:lang', function (req, res, next) {
   } else {
     next()
   }
-})
-app.get('/about', function (req, res) {
-  req.i18n.setLocale('en')
-  res.render('about',
-  {
-    title : req.i18n.__("About"),
-    rel_url : 'about'
-  }
-  )
 })
 app.get('/:lang/about', function (req, res, next) {
   if (/\w{2}(_\w+)?/.test(req.params.lang)) {
