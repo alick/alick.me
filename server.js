@@ -96,6 +96,18 @@ app.get('/:lang/about', function (req, res, next) {
   }
 })
 
+// cf. http://www.digidad.me.uk/2017/03/using-ssl-with-nodejs-and-openshift.html
+// Lets encrypt response
+var letsEncryptUrl = process.env.LETS_ENCRYPT;
+var letsEncryptResponse = process.env.LETS_ENCRYPT_RESPONSE;
+
+if(letsEncryptResponse != undefined && letsEncryptResponse != undefined) {
+  self.app.get('/.well-known/acme-challenge/' + letsEncryptUrl, function (req, res) {
+    res.send(letsEncryptResponse)
+    res.end()
+  })
+}
+
 app.get('/404', function (req, res, next) {
   next();
 });
