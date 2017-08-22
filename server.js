@@ -102,7 +102,7 @@ var letsEncryptUrl = process.env.LETS_ENCRYPT;
 var letsEncryptResponse = process.env.LETS_ENCRYPT_RESPONSE;
 
 if(letsEncryptResponse != undefined && letsEncryptResponse != undefined) {
-  self.app.get('/.well-known/acme-challenge/' + letsEncryptUrl, function (req, res) {
+  app.get('/.well-known/acme-challenge/' + letsEncryptUrl, function (req, res) {
     res.send(letsEncryptResponse)
     res.end()
   })
