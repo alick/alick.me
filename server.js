@@ -20,8 +20,8 @@ function compile(str, path) {
     .use(nib())
 }
 
-app.set('hostname', process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1');
-app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 2460);
+app.set('hostname', process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0');
+app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 8080);
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'jade');
 app.use(favicon(__dirname + '/public/images/favicon.ico'));
