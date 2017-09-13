@@ -1,3 +1,1 @@
-The OpenShift `nodejs` cartridge documentation can be found at:
-
-http://openshift.github.io/documentation/oo_cartridge_guide.html#nodejs
+Here is the source code of Alick's personal website, with the domain name `alick.me`.
