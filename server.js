@@ -20,7 +20,6 @@ function compile(str, path) {
     .use(nib())
 }
 
-app.set('hostname', '127.0.0.1');
 // AWS Elastic Beanstalk sets PORT env for containers.
 // cf. https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_nodejs.container.html#nodejs-platform-configfiles
 app.set('port', process.env.PORT || 2460);
@@ -163,8 +162,7 @@ app.use(function(err, req, res, next){
   res.render('500', { error: err });
 });
 
-var server = http.createServer(app);
-server.listen(app.get('port'), app.get('hostname'), function(){
+app.listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
 
