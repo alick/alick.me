@@ -20,6 +20,7 @@
   "Domain name": "域名",
   "Changelog": "主要变更",
   "Migrate to AWS Elastic Beanstalk.":   "迁移到 AWS Elastic Beanstalk 平台。",
+  "Migrate to Heroku.":   "迁移到 Heroku。",
   "Internationalization.": "支援国际化。",
   "Use Bootstrap.": "引入 Bootstrap。",
   "3.x to 4.x.": "从 3.x 迁移到 4.x。",

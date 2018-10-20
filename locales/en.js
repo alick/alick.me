@@ -9,6 +9,7 @@
   "Domain name": "Domain name",
   "Changelog": "Changelog",
   "Migrate to AWS Elastic Beanstalk.":   "Migrate to AWS Elastic Beanstalk.",
+  "Migrate to Heroku.":   "Migrate to Heroku.",
   "Internationalization.": "Internationalization.",
   "Use Bootstrap.": "Use Bootstrap.",
   "3.x to 4.x.": "3.x to 4.x.",
