@@ -1,4 +1,5 @@
 {
+  "Show/Hide navigation menu": "显示/隐藏导航菜单",
   "the homepage": "首页",
   "About": "关于",
   "Welcome!": "欢迎光临！",

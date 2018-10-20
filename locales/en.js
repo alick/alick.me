@@ -1,4 +1,5 @@
 {
+  "Show/Hide navigation menu": "Show/Hide navigation menu",
   "About": "About",
   "About me": "About me",
   "Contact": "Contact",
