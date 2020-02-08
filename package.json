@@ -3,14 +3,15 @@
   "version": "1.4.1",
   "private": "true",
   "dependencies": {
-    "express": "~4.13.3",
-    "jade": "~1.11.0",
-    "stylus": "~0.52.4",
-    "nib": "~1.1.0",
-    "morgan": "~1.9.1",
-    "serve-favicon": "~2.3.0",
+    "cookie-parser": "1.4.x",
+    "express": "^4.17.1",
     "i18n-2": "0.6.x",
-    "cookie-parser": "1.4.x"
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1",
+    "nib": "^1.1.2",
+    "nodemon": "^2.0.2",
+    "serve-favicon": "^2.5.0",
+    "stylus": "^0.54.7"
   },
   "engines": {
     "node": "8.12.0"
