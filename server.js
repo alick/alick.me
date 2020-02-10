@@ -24,7 +24,7 @@ function compile(str, path) {
 // cf. https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_nodejs.container.html#nodejs-platform-configfiles
 app.set('port', process.env.PORT || 2460);
 app.set('views', path.join(__dirname, '/views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 app.use(favicon(__dirname + '/public/images/favicon.ico'));
 if ('development' == app.get('env')) {
   app.use(logger('dev'));
