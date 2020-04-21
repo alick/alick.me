@@ -1,0 +1,36 @@
+/* The CSS styles are modified from Mark Schenk's JabRef Export.
+ * cf. https://bitbucket.org/MarkSchenk/jabref-export
+ */
+form#quicksearch { width: auto; border-style: none; border-color: gray; padding: 0.7em 0.5em; display:none; position:relative; }
+span#searchstat {padding-left: 1em;}
+
+div#settings { margin-top:0.7em; /* border-bottom: 1px transparent solid; background-color: #efefef; border: 1px grey solid; */ }
+div#settings ul {margin: 0; padding: 0; }
+div#settings li {margin: 0; padding: 0 1em 0 0; display: inline; list-style: none; }
+div#settings li + li { border-left: 2px #efefef solid; padding-left: 0.5em;}
+div#settings input { margin-bottom: 0px;}
+
+div#settings.hidden {display:none;}
+
+#showsettings { border: 1px grey solid; padding: 0 0.5em; float:right; line-height: 1.6em; text-align: right; }
+#showsettings:hover { cursor: pointer; }
+
+.invalidsearch { background-color: red; }
+input[type="button"] { background-color: #efefef; border: 1px #2E2E2E solid;}
+
+li a { color: navy; text-decoration: none; }
+li a:hover  { text-decoration: underline; }
+
+li.show { display: list-item !important; }
+li.noshow { display: none; }
+li div.noshow { display: none;}
+li div.highlight { background-color: #EFEFEF; border-top: 2px #2E2E2E solid; font-weight: bold; }
+li div.abstract, li div.review, li div.bibtex { background-color: #EFEFEF; text-align: justify; }
+
+li div.bibtex pre { width: 100%; overflow: auto; white-space: pre-wrap;}
+p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
+
+@media print {
+  p.infolinks, #qs_settings, #quicksearch, t.bibtex { display: none !important; }
+  tr { page-break-inside: avoid; }
+}

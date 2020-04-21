@@ -36,6 +36,8 @@ app.use(stylus.middleware(
 ))
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/public')));
+// Serve static files for research homepage under /research.
+app.use('/research', express.static(path.join(__dirname, 'research')))
 
 i18n.expressBind(app, {
     // Setup locales - other locales default to en.

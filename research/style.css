@@ -1,0 +1,55 @@
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+
+header {
+    margin-top: 20px;
+}
+
+header h1 {
+    font-family: Geogia, Palatino, serif;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+}
+
+.bib {
+    font-size: 12px;
+    clear: both;
+    margin: 0;
+    padding: 1em;
+    overflow: auto;
+}
+
+.bibitem {
+    clear: both;
+}
+
+.bibitem-author-emph {
+    text-decoration: underline;
+}
+
+.bibitem-journal, .bibitem-inproceedings, .bibitem-inbook {
+    font-style: italic;
+}
+
+.bibitem-award {
+    color: red;
+    hyphens: none;
+}
+
+.bibbtn {
+    float: right;
+    margin: 0;
+}
+
+#biography p, #publications li {
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
