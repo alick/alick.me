@@ -98,6 +98,13 @@ app.get('/:lang/about', function (req, res, next) {
     next()
   }
 })
+app.get('/:lang/research', function (req, res, next) {
+  if (/en/.test(req.params.lang)) {
+    res.redirect('/research')
+  } else {
+    next()
+  }
+})
 
 // cf. http://www.digidad.me.uk/2017/03/using-ssl-with-nodejs-and-openshift.html
 // Lets encrypt response
