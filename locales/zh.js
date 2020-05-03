@@ -20,8 +20,8 @@
   "Contact": "联系方式",
   "Domain name": "域名",
   "Changelog": "主要变更",
-  "Migrate to AWS Elastic Beanstalk.":   "迁移到 AWS Elastic Beanstalk 平台。",
-  "Migrate to Heroku.":   "迁移到 Heroku。",
+  "Migrate to AWS Elastic Beanstalk.": "迁移到 AWS Elastic Beanstalk 平台。",
+  "Migrate to Heroku.": "迁移到 Heroku。",
   "Internationalization.": "支援国际化。",
   "Use Bootstrap.": "引入 Bootstrap。",
   "3.x to 4.x.": "从 3.x 迁移到 4.x。",
@@ -36,5 +36,7 @@
   "If not specified otherwise, the contents are licensed under <a href='http://creativecommons.org/licenses/by-sa/4.0/deed' title='Attribution-ShareAlike 4.0 International'>CC BY-SA 4.0</a>.": "如无特殊声明，本站内容以 <a href='http://creativecommons.org/licenses/by-sa/4.0/deed.zh' title='署名-相同方式共享 4.0 国际'>CC BY-SA 4.0</a> 许可授权使用。",
   "Alick is my English name picked up in the dictionary by myself.": "Alick 是我初二时从字典里附录中挑出来的英文名，沿用至今。",
   "\"me\" is the country code top-level domain for the country <a href='http://en.wikipedia.org/wiki/.me'>Montenegro</a>, but also apparently suitable for personal websites.": "\"me\" 是<a href='http://zh.wikipedia.org/wiki/.me'>黑山</a>这个国家的顶级域名，但同时也是英文中的“我”，所以被广泛用于个人网站。",
-  "Homepage": "首页"
+  "Homepage": "首页",
+  "Self-host research homepage.": "个人科研主页托管到自己的个人网站上。",
+  "This site is built with Node.js, Express, Pug (Jade), Stylus and others.": "本站使用 Node.js, Express, Pug (Jade), Stylus 等搭建。"
 }
