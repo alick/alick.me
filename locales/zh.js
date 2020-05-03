@@ -37,6 +37,7 @@
   "Alick is my English name picked up in the dictionary by myself.": "Alick 是我初二时从字典里附录中挑出来的英文名，沿用至今。",
   "\"me\" is the country code top-level domain for the country <a href='http://en.wikipedia.org/wiki/.me'>Montenegro</a>, but also apparently suitable for personal websites.": "\"me\" 是<a href='http://zh.wikipedia.org/wiki/.me'>黑山</a>这个国家的顶级域名，但同时也是英文中的“我”，所以被广泛用于个人网站。",
   "Homepage": "首页",
+  "Social Networking Site": "社交网站",
   "Self-host research homepage.": "个人科研主页托管到自己的个人网站上。",
   "This site is built with Node.js, Express, Pug (Jade), Stylus and others.": "本站使用 Node.js, Express, Pug (Jade), Stylus 等搭建。"
 }

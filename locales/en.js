@@ -9,8 +9,8 @@
   "About this site": "About this site",
   "Domain name": "Domain name",
   "Changelog": "Changelog",
-  "Migrate to AWS Elastic Beanstalk.":   "Migrate to AWS Elastic Beanstalk.",
-  "Migrate to Heroku.":   "Migrate to Heroku.",
+  "Migrate to AWS Elastic Beanstalk.": "Migrate to AWS Elastic Beanstalk.",
+  "Migrate to Heroku.": "Migrate to Heroku.",
   "Internationalization.": "Internationalization.",
   "Use Bootstrap.": "Use Bootstrap.",
   "3.x to 4.x.": "3.x to 4.x.",
@@ -39,5 +39,6 @@
   "Douban": "Douban",
   "Q&A": "Q&A",
   "Zhihu": "Zhihu",
-  "Research": "Research"
+  "Research": "Research",
+  "Social Networking Site": "Social Networking Site"
 }
