@@ -1,6 +1,6 @@
 {
   "name": "homepage",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "private": "true",
   "dependencies": {
     "cookie-parser": "1.4.x",
@@ -11,7 +11,7 @@
     "nodemon": "^2.0.4",
     "pug": "^3.0.0",
     "serve-favicon": "^2.5.0",
-    "stylus": "^0.54.7"
+    "stylus": "^0.54.8"
   },
   "engines": {
     "node": "12.16.2"
