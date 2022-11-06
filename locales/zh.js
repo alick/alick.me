@@ -29,7 +29,7 @@
   "Email preferred: ": "优先邮箱：",
   "IRC: alick at freenode": "IRC: alick 于 freenode",
   "Social Network Sites: Check <a href=\"/en/\">the homepage</a>.": "社交网站：参见<a href=\"/zh/\">首页</a>。",
-  "I'm Tao Zhao from China, currently a Research Scientist at Facebook.": "我是赵涛，河南许昌人，现为 Facebook 程序员。",
+  "I'm Tao Zhao from China, currently a Research Scientist at Meta.": "我是赵涛，河南许昌人，现为 Meta 软件工程师。",
   "I love free and open source technologies and culture.": "爱好自由与开源技术及其背后的开放协作文化。",
   "I am a <a href='https://fedoraproject.org/wiki/User:Alick'>Fedora Project contributor</a>.": "我是一名 <a href='https://fedoraproject.org/wiki/User:Alick/Zh'>Fedora 社区贡献者</a>。",
   "This site is built with Node.js, Express, Jade, Stylus and others.": "本站使用 Node.js, Express, Jade, Stylus 等搭建。",

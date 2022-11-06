@@ -18,7 +18,7 @@
   "I'm Tao Zhao from China, currently a Ph.D. student in Texas A&amp;M University.": "I'm Tao Zhao from China, currently a Ph.D. student in Texas A&amp;M University.",
   "I love free and open source technologies and culture.": "I love free and open source technologies and culture.",
   "I am a <a href='https://fedoraproject.org/wiki/User:Alick'>Fedora Project contributor</a>.": "I am a <a href='https://fedoraproject.org/wiki/User:Alick'>Fedora Project contributor</a>.",
-  "I'm Tao Zhao from China, currently a Research Scientist at Facebook.": "I'm Tao Zhao from China, currently a Research Scientist at Facebook.",
+  "I'm Tao Zhao from China, currently a Research Scientist at Meta.": "I'm Tao Zhao from China, currently a Research Scientist at Meta.",
   "": "",
   "This site is built with Node.js, Express, Jade, Stylus and so on.": "This site is built with Node.js, Express, Jade, Stylus and so on.",
   "If not specified otherwise, the contents are licensed under <a href='http://creativecommons.org/licenses/by-sa/4.0/deed' title='Attribution-ShareAlike 4.0 International'>CC BY-SA 4.0</a>.": "If not specified otherwise, the contents are licensed under <a href='http://creativecommons.org/licenses/by-sa/4.0/deed' title='Attribution-ShareAlike 4.0 International'>CC BY-SA 4.0</a>.",
