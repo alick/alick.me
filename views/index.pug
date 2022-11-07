@@ -5,17 +5,18 @@ block content
     p=__("Here are links to Alick's footprints on the Internet.")
   section.surfing
     .sitegroup
-      .sitegroupname.label-primary #{__('Personal')}
-      .sitelist
-        a(href='https://alick9188.wordpress.com/') #{__('Blog')}
-        a(href='https://github.com/alick/mywiki/wiki') #{__('Wiki')}
-        a(href='http://www.flickr.com/photos/alick9188/') #{__('Photos')}
-    .sitegroup
       .sitegroupname.label-primary #{__('Open Source')}
       .sitelist
+        a(href='https://fosstodon.org/web/@alick') Fosstodon
         a(href="https://fedoraproject.org/wiki/User:Alick") Fedora
         a(href='https://github.com/alick') GitHub
         a(href='https://addons.mozilla.org/en-US/firefox/user/alick/') AMO
+    .sitegroup
+      .sitegroupname.label-primary #{__('Q&A')}
+      .sitelist
+        a(href='https://stackexchange.com/users/1194603/alick') StackExchange
+        a(href='https://www.quora.com/Alick-Zhao') Quora
+        a(href='http://www.zhihu.com/people/alickzhao') #{__('Zhihu')}
     .sitegroup
       .sitegroupname.label-primary
         - var desc = __('Social Networking Site')
@@ -26,19 +27,19 @@ block content
         a(href='https://www.linkedin.com/in/tao-zhao-562236113/') LinkedIn
         a(href='http://weibo.com/alickzhao') #{__('Weibo')}
     .sitegroup
-      .sitegroupname.label-primary #{__('Life')}
+      .sitegroupname.label-primary #{__('Personal')}
       .sitelist
-        a(href='http://www.douban.com/people/alick9188/') #{__('Douban')}
-        a(href='http://www.imdb.com/user/ur62749555/') IMDb
-    .sitegroup
-      .sitegroupname.label-primary #{__('Q&A')}
-      .sitelist
-        a(href='https://stackexchange.com/users/1194603/alick') StackExchange
-        a(href='https://www.quora.com/Alick-Zhao') Quora
-        a(href='http://www.zhihu.com/people/alickzhao') #{__('Zhihu')}
+        a(href='https://alick9188.wordpress.com/') #{__('Blog')}
+        a(href='https://github.com/alick/mywiki/wiki') #{__('Wiki')}
+        a(href='http://www.flickr.com/photos/alick9188/') #{__('Photos')}
     .sitegroup
       .sitegroupname.label-primary #{__('Research')}
       .sitelist
         a(href='https://orcid.org/0000-0003-0395-9260') ORCID
         a(href='https://scholar.google.com/citations?user=XFntX24AAAAJ') Google Scholar
+    .sitegroup
+      .sitegroupname.label-primary #{__('Life')}
+      .sitelist
+        a(href='http://www.douban.com/people/alick9188/') #{__('Douban')}
+        a(href='http://www.imdb.com/user/ur62749555/') IMDb
 //- vim: set et sw=2 ai:
