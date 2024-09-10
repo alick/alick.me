@@ -4,7 +4,7 @@
   "private": "true",
   "dependencies": {
     "cookie-parser": "1.4.x",
-    "express": "^4.19.2",
+    "express": "^4.20.0",
     "i18n-2": "0.6.x",
     "morgan": "~1.9.1",
     "nib": "^1.1.2",
