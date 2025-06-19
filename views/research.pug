@@ -1,0 +1,83 @@
+extend layout
+
+block title
+  title Research | Tao Zhao | Alick.me
+
+block extra_head
+  link(rel="stylesheet", href="/research/research.css")
+  link(rel="stylesheet", href="/research/quicksearch.css")
+
+block content
+  header
+    .row
+      .col-md-4
+        img(title="Tao Zhao's Photo", src="/research/photo.jpg", alt="Tao Zhao's Photo", height="220")
+      .col-md-8
+        h1 Tao Zhao
+        p Research Scientist
+        p
+          a(href="https://about.meta.com") Meta Platforms, Inc.
+        ul
+          li ✉ Email: taoz NOSPAM AT meta DOT com
+  section#biography
+    h2 Biography
+    p Dr. Tao Zhao is a research scientist at 
+      a(href="https://about.meta.com") Meta
+      |  at Menlo Park, California, United States. He received his PhD degree in 
+      a(href="http://www.ece.tamu.edu/") Department of Electrical & Computer Engineering
+      | , 
+      a(href="http://www.tamu.edu/") Texas A&M University
+      | , College Station, Texas, United States in August, 2019. Before that, he received his B.Eng. and M.Sc. degrees from 
+      a(href="http://www.tsinghua.edu.cn/") Tsinghua University
+      | , Beijing, China, in 2012 and 2015, respectively. Dr. Zhao has a broad research interest in networking systems. Currently he is working on software projects on network modeling, network provisioning, and IP address management. He received the Best Student Paper Award in WiOpt 2017. He is also a recipient of the Student Travel Grant to ACM MobiCom 2018.
+  section#publications
+    h2 Publications
+    form(action="" id="quicksearch")
+      input(type="text" id="qs_field" autocomplete="off" placeholder="Type to search...")
+      input(type="button" class="btn btn-default btn-sm" onclick="clearQS()" value="clear")
+      span#searchstat Matching entries: 
+        span#stat 0
+      div#showsettings.btn.btn-default(onclick="toggleSettings()") Settings
+      div#settings.hidden
+        ul
+          li
+            input(type="checkbox" class="search_setting" id="opt_searchAbs" onchange="updateSetting(this)")
+            label(for="opt_searchAbs")  include abstract
+          li
+            input(type="checkbox" class="search_setting" id="opt_searchRev" onchange="updateSetting(this)")
+            label(for="opt_searchRev")  include review
+          li
+            input(type="checkbox" class="search_setting" id="opt_useRegExp" onchange="updateSetting(this)")
+            label(for="opt_useRegExp")  use RegExp
+          li
+            input(type="checkbox" class="search_setting" id="opt_noAccents" onchange="updateSetting(this)")
+            label(for="opt_noAccents")  ignore accents
+    div#qs_table
+      ol
+        include bib.pug
+  section#projects
+    h2 Research Projects
+    ul
+      li: a(href="https://youtu.be/uQcFpRsk1v8") SPLICE: Secure Predictive Low-Latency Information Centric Edge
+      li CaVe-CoP: Cache-Version Selection and Content Placement
+      li Non-Monetary Mechanism for Optimal Rate Control
+      li Online Edge-Cloud Reconfiguration
+      li νBS: Niulab Virtual Base Station
+      li EDT: Energy-Delay Tradeoff of Virtual Base Stations
+      li CONCERT: Cloud-Based Cellular Architecture
+      li HyCell: Hyper-Cellular Network Testbed
+  section#more
+    h2 More Information
+    ul
+      li: a(href="https://scholar.google.com/citations?user=XFntX24AAAAJ") Google Scholar Page
+      li: a(href="https://orcid.org/0000-0003-0395-9260") ORCID
+      li: a(href="http://network.ee.tsinghua.edu.cn/niulab/?p=1251") Past Research Homepage
+      li: a(href="http://alick.me") Personal Homepage
+      li: a(href="https://github.com/alick/alick.me") This page's source code
+  hr
+  footer
+    | Copyright © Tao Zhao 2015–2025
+
+block script
+  script(src="/research/bibtex.js")
+  script(src="/research/quicksearch.js") 

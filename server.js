@@ -36,8 +36,16 @@ app.use(stylus.middleware(
 ))
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/public')));
-// Serve static files for research homepage under /research.
-app.use('/research', express.static(path.join(__dirname, 'research')))
+
+// Serve static assets for research page
+app.use('/research/photo.jpg', express.static(path.join(__dirname, 'research/photo.jpg')));
+app.use('/research/bibtex.js', express.static(path.join(__dirname, 'research/bibtex.js')));
+app.use('/research/quicksearch.js', express.static(path.join(__dirname, 'research/quicksearch.js')));
+app.use('/research/quicksearch.css', express.static(path.join(__dirname, 'research/quicksearch.css')));
+app.use('/research/research.css', express.static(path.join(__dirname, 'research/research.css')));
+app.use('/research/zhao2012bthesis.pdf', express.static(path.join(__dirname, 'research/zhao2012bthesis.pdf')));
+app.use('/research/zhao2015mthesis.pdf', express.static(path.join(__dirname, 'research/zhao2015mthesis.pdf')));
+app.use('/research/zhao2017eda-slides.pdf', express.static(path.join(__dirname, 'research/zhao2017eda-slides.pdf')));
 
 i18n.expressBind(app, {
     // Setup locales - other locales default to en.
@@ -72,6 +80,13 @@ app.get('/about', function (req, res) {
   }
   )
 })
+app.get('/research', function (req, res) {
+  res.render('research', {
+    title: req.i18n ? req.i18n.__("Research") : "Research",
+    rel_url: 'research'
+  });
+});
+
 app.get('/:lang', function (req, res, next) {
   if (/\w{2}(_\w+)?/.test(req.params.lang)) {
     req.i18n.setLocale(req.params.lang)
@@ -99,8 +114,14 @@ app.get('/:lang/about', function (req, res, next) {
   }
 })
 app.get('/:lang/research', function (req, res, next) {
-  if (/en/.test(req.params.lang)) {
-    res.redirect('/research')
+  if (/\w{2}(_\w+)?/.test(req.params.lang)) {
+    req.i18n.setLocale(req.params.lang)
+    res.render('research',
+    {
+      title : req.i18n.__("Research"),
+      rel_url : 'research'
+    }
+    )
   } else {
     next()
   }
