@@ -1,6 +1,6 @@
 {
   "name": "homepage",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "private": "true",
   "dependencies": {
     "cookie-parser": "1.4.x",
