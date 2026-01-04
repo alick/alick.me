@@ -42,5 +42,6 @@
   "Research": "Research",
   "Social Networking Site": "Social Networking Site",
   "This site is built with Node.js, Express, Pug (Jade), Stylus and others.": "This site is built with Node.js, Express, Pug (Jade), Stylus and others.",
-  "Self-host research homepage.": "Self-host research homepage."
+  "Self-host research homepage.": "Self-host research homepage.",
+  "Let /research share the same theme": "Let /research share the same theme"
 }

@@ -38,5 +38,6 @@
   "Homepage": "首页",
   "Social Networking Site": "社交网站",
   "Self-host research homepage.": "个人科研主页托管到自己的个人网站上。",
-  "This site is built with Node.js, Express, Pug (Jade), Stylus and others.": "本站使用 Node.js, Express, Pug (Jade), Stylus 等搭建。"
+  "This site is built with Node.js, Express, Pug (Jade), Stylus and others.": "本站使用 Node.js, Express, Pug (Jade), Stylus 等搭建。",
+  "Let /research share the same theme": "统一 /research 页面主题样式"
 }
