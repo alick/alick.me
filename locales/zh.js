@@ -4,6 +4,7 @@
   "About": "关于",
   "Welcome!": "欢迎光临！",
   "Here are links to Alick's footprints on the Internet.": "这里链接了 Alick 在网络上发布与分享的各种内容。",
+  "Active": "依然活跃",
   "Personal": "个人",
   "Blog": "博客",
   "Wiki": "维基",
