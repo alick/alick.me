@@ -18,7 +18,7 @@ div#settings.hidden {display:none;}
 .invalidsearch { background-color: red; }
 input[type="button"] { background-color: #efefef; border: 1px #2E2E2E solid;}
 
-li a { color: navy; text-decoration: none; }
+li a { text-decoration: none; }
 li a:hover  { text-decoration: underline; }
 
 li.show { display: list-item !important; }

@@ -4,12 +4,33 @@
 @import 'nib'
 
 /*
+ * CSS Custom Properties for theming
+ */
+:root
+  --bg-color #faf9f0
+  --text-color #444
+  --border-color blue
+  --link-bg-color #00c8c8
+  --link-hover-color yellow
+  --focus-bg-color #337AB7
+  --jumbotron-bg #faf9f0
+
+[data-theme="dark"]
+  --bg-color #1a1a1a
+  --text-color #e0e0e0
+  --border-color #4a90e2
+  --link-bg-color #2c5aa0
+  --link-hover-color #ffd700
+  --focus-bg-color #4a90e2
+  --jumbotron-bg #2d2d2d
+
+/*
  * Store the main color and
  * background color as variables
  */
-background-color = #faf9f0
+background-color = var(--bg-color)
 /* same as .label-primary */
-bg-color-focus = #337AB7
+bg-color-focus = var(--focus-bg-color)
 
 @media (min-width: 768px)
   .container
@@ -18,43 +39,47 @@ bg-color-focus = #337AB7
 body
   font-family 'sans-serif'
   background-color background-color
-  color #444
+  color var(--text-color)
   padding-top 70px
+  transition background-color 0.3s ease, color 0.3s ease
 
 p
   line-height 1.5
 
 .container .jumbotron
-  background-color background-color
+  background-color var(--jumbotron-bg)
   margin: 0
   padding: 10px
+  transition background-color 0.3s ease
 
 .surfing
   margin 10px
   font-size 16px
 
 .sitegroup
-  border 1px solid blue
+  border 1px solid var(--border-color)
   border-radius 3px
   margin 3px
   display inline-block
   max-width 260px
   min-width 80px
   vertical-align top
+  transition border-color 0.3s ease
 
 .sitegroup:hover
-  background-color background-color
+  background-color var(--jumbotron-bg)
 
 .sitegroup a
-  background-color #00c8c8
+  background-color var(--link-bg-color)
   color white
   border-radius 5px
   display inline-block
   margin 3px 2px
   padding 2px
+  transition background-color 0.3s ease, color 0.3s ease
 
 .sitegroup a:hover
-  color yellow
+  color var(--link-hover-color)
   text-decoration none
   background-color bg-color-focus
 
@@ -76,5 +101,14 @@ p
 
 .centering
   text-align center
+
+/* Theme toggle button styling */
+#theme-toggle
+  font-size 1.2em
+  padding 10px 15px
+  transition transform 0.3s ease
+
+#theme-toggle:hover
+  transform scale(1.1)
 
 /* vim: set sw=2 et ai: */

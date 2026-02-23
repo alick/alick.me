@@ -29,4 +29,37 @@ $(document).ready(function() {
     // Strip out possible leading slash and lang code (e.g. /, /zh_CN/)
     path = path.replace(/\/(\w{2}(_\w+)?\/)?/, '');
     $('.nav a[href="' + path + '"]').parent().addClass('active');
+    
+    // Theme toggle functionality
+    var themeToggle = $('#theme-toggle');
+    var themeIcon = $('#theme-icon');
+    var html = $('html');
+    var navbar = $('#main-navbar');
+    
+    // Check for saved theme preference or default to light
+    var currentTheme = localStorage.getItem('theme') || 'light';
+    if (currentTheme === 'dark') {
+        html.attr('data-theme', 'dark');
+        themeIcon.text('☀️');
+        navbar.removeClass('navbar-default').addClass('navbar-inverse');
+    }
+    
+    // Theme toggle click handler
+    themeToggle.on('click', function(e) {
+        e.preventDefault();
+        
+        if (html.attr('data-theme') === 'dark') {
+            // Switch to light theme
+            html.removeAttr('data-theme');
+            themeIcon.text('🌙');
+            localStorage.setItem('theme', 'light');
+            navbar.removeClass('navbar-inverse').addClass('navbar-default');
+        } else {
+            // Switch to dark theme
+            html.attr('data-theme', 'dark');
+            themeIcon.text('☀️');
+            localStorage.setItem('theme', 'dark');
+            navbar.removeClass('navbar-default').addClass('navbar-inverse');
+        }
+    });
 });

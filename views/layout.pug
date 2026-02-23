@@ -17,7 +17,7 @@ html(lang='zh')
       script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
     block extra_head
   body
-    nav(class='navbar navbar-default navbar-fixed-top')
+    nav(class='navbar navbar-default navbar-fixed-top' id='main-navbar')
       .container
         .navbar-header
           button(type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#navbar' aria-expanded='false' aria-controls='navbar')
@@ -28,6 +28,9 @@ html(lang='zh')
           a(href='/' class='navbar-brand') #{app}
         #navbar(class='navbar-collapse collapse')
           ul(class='nav navbar-nav navbar-right')
+            li
+              a#theme-toggle(href='#' title='Toggle dark theme')
+                span#theme-icon 🌙
             li
               a.lang(href='/en/' + rel_url) EN
             li
